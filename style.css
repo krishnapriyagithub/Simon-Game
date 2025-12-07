@@ -1,0 +1,95 @@
+body
+{
+    text-align:center;
+}
+.btn
+{
+    height:200px;
+    width:200px;
+    border-radius: 20%;
+    border: 10px solid black;
+    margin:2rem;
+    cursor: pointer;
+}
+.btn-container
+{
+    display:flex;
+    justify-content:center;
+    background-color:aqua
+}
+.yellow
+{
+    background-color: rgb(223, 229, 114);
+}
+.red
+{
+    background-color: rgb(240, 106, 106);
+
+}
+.green
+{
+    background-color: rgb(89, 162, 89);
+}
+.purple
+{
+    background-color: rgb(154, 83, 154);
+}
+.gameflash
+{
+    background-color: white;
+}
+.userflash
+{
+    background-color:maroon;
+}
+
+/* ---------- Mobile View (Phones) ---------- */
+@media (max-width: 600px) {
+
+    body {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.5rem; 
+        margin-top: 10px;
+    }
+
+    h2 {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .btn-container {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding-top: 10px;
+    }
+
+    .line-one,
+    .line-two {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .btn {
+        height: 120px;
+        width: 120px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .btn {
+        height: 100px;
+        width: 100px;
+    }
+}
