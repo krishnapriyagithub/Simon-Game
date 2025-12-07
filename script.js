@@ -2,8 +2,9 @@
 
 let gameseq = [];
 let userseq = [];
-
+let highscore=0;
 let btns =["yellow","red","green","purple"];
+let high=document.querySelector("h1");
 
 let started=false;
 let level = 0;
@@ -79,6 +80,8 @@ function check(idx)//the idx of the color just entered by the user
     else
     {
          h2.innerHTML ="Game Over! <b>Your Score was " + level + "</b><br>Press any key or Tap to restart again";
+         highscore=Math.max(highscore,level);
+         high.innerHTML="HighScore: " + highscore;
          document.querySelector("body").style.backgroundColor="red";
          setTimeout(()=>{document.querySelector("body").style.backgroundColor="white";},150);
          reset();
@@ -90,7 +93,6 @@ function check(idx)//the idx of the color just entered by the user
     btn.addEventListener("click",()=>{
         userflash(btn);
         usercolor=btn.getAttribute("id");
-       
         userseq.push(usercolor);
         
         check(userseq.length-1);//last idx entered by the user
