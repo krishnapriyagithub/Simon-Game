@@ -48,7 +48,7 @@ function levelUp()
     userseq=[]; //everytime user has to press from the start
     level++;
     h2.innerText ="level " + level;
-    let randidx= Math.floor(Math.random()*3);
+    let randidx= Math.floor(Math.random()*4);
     randcolor=btns[randidx];
     let randbtn=document.querySelector("." +randcolor);
        
